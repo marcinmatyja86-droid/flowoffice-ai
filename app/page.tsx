@@ -57,11 +57,14 @@ export default function AICOOFullProductPage() {
   ]
 
   return (
-    <main className="min-h-screen bg-[#050505] text-white">
-      <section className="border-b border-white/10 bg-[radial-gradient(circle_at_top_right,_rgba(34,211,238,0.20),_transparent_34%),radial-gradient(circle_at_top_left,_rgba(37,99,235,0.18),_transparent_32%)]">
+    <main className="min-h-screen bg-[#050505] text-white scroll-smooth">
+      <section
+        id="dashboard"
+        className="border-b border-white/10 bg-[radial-gradient(circle_at_top_right,_rgba(34,211,238,0.20),_transparent_34%),radial-gradient(circle_at_top_left,_rgba(37,99,235,0.18),_transparent_32%)]"
+      >
         <div className="max-w-7xl mx-auto px-6 py-8">
           <nav className="flex items-center justify-between mb-24">
-            <div className="flex items-center gap-3">
+            <a href="#dashboard" className="flex items-center gap-3">
               <div className="w-12 h-12 rounded-2xl bg-cyan-400 text-black flex items-center justify-center font-black text-lg">
                 AI
               </div>
@@ -69,20 +72,23 @@ export default function AICOOFullProductPage() {
                 <div className="font-black text-xl">AI COO</div>
                 <div className="text-xs text-zinc-400">Operations Intelligence Platform</div>
               </div>
-            </div>
+            </a>
 
             <div className="hidden lg:flex items-center gap-8 text-sm text-zinc-300">
-              <a>Problem</a>
-              <a>Moduły</a>
-              <a>Dashboard</a>
-              <a>Wdrożenie</a>
-              <a>Cennik</a>
-              <a>FAQ</a>
+              <a href="#problem" className="hover:text-cyan-300 transition-colors">Problem</a>
+              <a href="#moduly" className="hover:text-cyan-300 transition-colors">Moduły</a>
+              <a href="#dashboard" className="hover:text-cyan-300 transition-colors">Dashboard</a>
+              <a href="#wdrozenie" className="hover:text-cyan-300 transition-colors">Wdrożenie</a>
+              <a href="#cennik" className="hover:text-cyan-300 transition-colors">Cennik</a>
+              <a href="#faq" className="hover:text-cyan-300 transition-colors">FAQ</a>
             </div>
 
-            <button className="bg-white text-black px-5 py-3 rounded-2xl font-black hover:scale-105 transition-transform">
+            <a
+              href="#kontakt"
+              className="bg-white text-black px-5 py-3 rounded-2xl font-black hover:scale-105 transition-transform"
+            >
               Umów demo
-            </button>
+            </a>
           </nav>
 
           <div className="grid lg:grid-cols-2 gap-14 items-center pb-20">
@@ -102,12 +108,18 @@ export default function AICOOFullProductPage() {
               </p>
 
               <div className="flex flex-wrap gap-4 mb-10">
-                <button className="bg-cyan-400 text-black px-8 py-4 rounded-2xl font-black hover:scale-105 transition-transform">
+                <a
+                  href="#dashboard"
+                  className="bg-cyan-400 text-black px-8 py-4 rounded-2xl font-black hover:scale-105 transition-transform"
+                >
                   Zobacz demo systemu
-                </button>
-                <button className="border border-white/15 px-8 py-4 rounded-2xl font-bold hover:bg-white/5 transition-colors">
-                  Pobierz ofertę PDF
-                </button>
+                </a>
+                <a
+                  href="#cennik"
+                  className="border border-white/15 px-8 py-4 rounded-2xl font-bold hover:bg-white/5 transition-colors"
+                >
+                  Zobacz ofertę
+                </a>
               </div>
 
               <div className="grid grid-cols-3 gap-4 max-w-2xl">
@@ -181,7 +193,7 @@ export default function AICOOFullProductPage() {
         </div>
       </section>
 
-      <section className="max-w-7xl mx-auto px-6 py-20">
+      <section id="problem" className="max-w-7xl mx-auto px-6 py-20 scroll-mt-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
             <p className="text-cyan-300 uppercase tracking-[0.25em] text-sm font-bold mb-3">Problem</p>
@@ -212,7 +224,7 @@ export default function AICOOFullProductPage() {
         </div>
       </section>
 
-      <section className="max-w-7xl mx-auto px-6 pb-20">
+      <section id="moduly" className="max-w-7xl mx-auto px-6 pb-20 scroll-mt-10">
         <div className="mb-10">
           <p className="text-cyan-300 uppercase tracking-[0.25em] text-sm font-bold mb-3">Moduły</p>
           <h2 className="text-4xl md:text-5xl font-black">Jeden system. Sześć funkcji operacyjnych.</h2>
@@ -228,7 +240,7 @@ export default function AICOOFullProductPage() {
         </div>
       </section>
 
-      <section className="max-w-7xl mx-auto px-6 pb-20">
+      <section id="wdrozenie" className="max-w-7xl mx-auto px-6 pb-20 scroll-mt-10">
         <div className="bg-white text-black rounded-[2.5rem] p-8 md:p-12">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -240,9 +252,9 @@ export default function AICOOFullProductPage() {
                 AI COO nie jest chatbotem. To warstwa operacyjna nad skrzynką mailową, dokumentami,
                 zadaniami i finansami. System obserwuje firmę, wykrywa problemy i podpowiada decyzje.
               </p>
-              <button className="bg-black text-white px-8 py-4 rounded-2xl font-black">
+              <a href="#kontakt" className="inline-block bg-black text-white px-8 py-4 rounded-2xl font-black">
                 Umów audyt operacyjny
-              </button>
+              </a>
             </div>
 
             <div className="space-y-4">
@@ -262,7 +274,7 @@ export default function AICOOFullProductPage() {
         </div>
       </section>
 
-      <section className="max-w-7xl mx-auto px-6 pb-20">
+      <section id="branze" className="max-w-7xl mx-auto px-6 pb-20 scroll-mt-10">
         <div className="mb-10">
           <p className="text-cyan-300 uppercase tracking-[0.25em] text-sm font-bold mb-3">Branże</p>
           <h2 className="text-4xl md:text-5xl font-black">Najlepsze firmy na start sprzedaży</h2>
@@ -319,7 +331,7 @@ export default function AICOOFullProductPage() {
         </div>
       </section>
 
-      <section className="max-w-7xl mx-auto px-6 pb-20">
+      <section id="cennik" className="max-w-7xl mx-auto px-6 pb-20 scroll-mt-10">
         <div className="mb-10">
           <p className="text-cyan-300 uppercase tracking-[0.25em] text-sm font-bold mb-3">Cennik</p>
           <h2 className="text-4xl md:text-5xl font-black">Sprzedaż w trzech krokach</h2>
@@ -330,26 +342,32 @@ export default function AICOOFullProductPage() {
             <div className="text-zinc-400 mb-2">Audyt operacyjny</div>
             <div className="text-4xl font-black mb-5">2 500–5 000 zł</div>
             <p className="text-zinc-400 mb-8">Mapa procesów, strat czasu, ryzyk i automatyzacji.</p>
-            <button className="w-full border border-white/15 rounded-2xl py-4 font-bold">Zamów audyt</button>
+            <a href="#kontakt" className="block text-center w-full border border-white/15 rounded-2xl py-4 font-bold">
+              Zamów audyt
+            </a>
           </div>
 
           <div className="bg-cyan-400 text-black rounded-[2rem] p-8 scale-105 shadow-2xl">
             <div className="font-bold mb-2">Wdrożenie AI COO</div>
             <div className="text-4xl font-black mb-5">10–50 tys. zł</div>
             <p className="mb-8">Konfiguracja systemu, integracje, dashboard, automatyzacje i szkolenie.</p>
-            <button className="w-full bg-black text-white rounded-2xl py-4 font-black">Umów wdrożenie</button>
+            <a href="#kontakt" className="block text-center w-full bg-black text-white rounded-2xl py-4 font-black">
+              Umów wdrożenie
+            </a>
           </div>
 
           <div className="bg-zinc-950 border border-white/10 rounded-[2rem] p-8">
             <div className="text-zinc-400 mb-2">Abonament COO</div>
             <div className="text-4xl font-black mb-5">2 000–10 000 zł/mies.</div>
             <p className="text-zinc-400 mb-8">Monitoring, support, aktualizacje, raporty i rozwój automatyzacji.</p>
-            <button className="w-full border border-white/15 rounded-2xl py-4 font-bold">Zobacz zakres</button>
+            <a href="#kontakt" className="block text-center w-full border border-white/15 rounded-2xl py-4 font-bold">
+              Zobacz zakres
+            </a>
           </div>
         </div>
       </section>
 
-      <section className="max-w-5xl mx-auto px-6 pb-20">
+      <section id="faq" className="max-w-5xl mx-auto px-6 pb-20 scroll-mt-10">
         <div className="text-center mb-10">
           <p className="text-cyan-300 uppercase tracking-[0.25em] text-sm font-bold mb-3">FAQ</p>
           <h2 className="text-4xl md:text-5xl font-black">Najczęstsze pytania klientów</h2>
@@ -365,7 +383,7 @@ export default function AICOOFullProductPage() {
         </div>
       </section>
 
-      <section className="max-w-7xl mx-auto px-6 pb-24">
+      <section id="kontakt" className="max-w-7xl mx-auto px-6 pb-24 scroll-mt-10">
         <div className="bg-gradient-to-r from-cyan-400 to-blue-600 rounded-[3rem] p-10 md:p-16 text-black text-center">
           <p className="uppercase tracking-[0.3em] text-sm font-black mb-5">AI COO dla małych firm</p>
           <h2 className="text-5xl md:text-6xl font-black mb-6 leading-tight">
@@ -374,9 +392,12 @@ export default function AICOOFullProductPage() {
           <p className="text-xl max-w-3xl mx-auto mb-10">
             Zacznij od audytu. W 7 dni pokażemy, gdzie Twoja firma traci czas, pieniądze i kontrolę.
           </p>
-          <button className="bg-black text-white px-10 py-5 rounded-2xl font-black hover:scale-105 transition-transform">
+          <a
+            href="mailto:marcin.matyja86@gmail.com?subject=AI COO - demo&body=Dzień dobry, proszę o kontakt w sprawie AI COO."
+            className="inline-block bg-black text-white px-10 py-5 rounded-2xl font-black hover:scale-105 transition-transform"
+          >
             Umów bezpłatną rozmowę
-          </button>
+          </a>
         </div>
       </section>
     </main>
